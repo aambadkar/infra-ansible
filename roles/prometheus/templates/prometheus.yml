@@ -33,9 +33,9 @@ scrape_configs:
       - region: us-east-1
         port: 9100
 
-        filters:
-          - name: "tag:project"
-            value: ["expense"]
+        #filters:
+         # - name: "tag:project"
+         #   value: ["expense"]
 
     relabel_configs:
       # Use the instance ID as the instance label
