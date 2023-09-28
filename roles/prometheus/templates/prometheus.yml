@@ -35,7 +35,7 @@ scrape_configs:
         port: 9100
 
     relabel_configs:
-      - source_labels: [ __meta_ec2_public_ip ]
-        target_label: publicip
+      - source_labels: [ __meta_ec2_private_ip ]
+        target_label: private
      # - source_labels: [ __meta_ec2_tag_name ]
       #  target_label: name
