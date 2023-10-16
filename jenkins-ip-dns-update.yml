@@ -1,0 +1,12 @@
+- name: update jenkins ip in route53
+  hosts: localhost
+  tasks:
+    - name: update jenkins ip
+      amazon.aws.route53:
+        state: present
+        zone: devopsa17.online
+        record: jenkins.devopsa17.online
+        type: A
+        ttl: 10
+        value: 54.86.181.134
+        wait: true
